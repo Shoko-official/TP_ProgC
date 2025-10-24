@@ -3,7 +3,7 @@
 int main() {
     int compteur = 0;
 
-    while (compteur <= 0 || compteur >= 10) {
+    while(compteur < 1 || compteur > 9) {
         printf("Entrez un nombre entier (1 a 9) : ");
         scanf("%i", &compteur);
     }

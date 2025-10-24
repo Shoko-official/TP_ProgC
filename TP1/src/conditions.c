@@ -1,11 +1,14 @@
 #include <stdio.h>
 
+char* JAUNE_CLAIR() { return "\033[93m"; }
+char* RESET() { return "\033[0m"; }
+
 int main() {
     int somme = 0;
 
     for (int i = 1; i <= 1000; i++) {
         if (i % 5 == 0 || i % 7 == 0) {
-            continue; // on saute
+            continue; // on saute les multiples de 5 ou 7
         }
         somme += i;
 
@@ -14,7 +17,8 @@ int main() {
         }
     }
 
-    printf("La somme finale est de : %i\n", somme);
+    // Affichage avec couleur
+    printf("La somme finale est de : %s%d%s\n", JAUNE_CLAIR(), somme, RESET());
 
     return 0;
 }
