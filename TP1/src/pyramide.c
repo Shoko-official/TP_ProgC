@@ -1,17 +1,22 @@
 #include <stdio.h>
 
 int main() {
-    int compteur = 0;
+    int n = 5;
+    int i, j;
 
-    while (compteur <= 0 || compteur >= 10) {
-        printf("Entrez un nombre entier (1 a 9) : ");
-        scanf("%i", &compteur);
-    }
-
-    for (int i = 1; i <= compteur; i++) {
-        for (int j = 1; j <= i; j++) {
-            printf("* ");
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n - i; j++) {
+            printf(" ");
         }
+
+        for (j = 1; j <= i; j++) {
+            printf("%d", j);
+        }
+
+        for (j = i - 1; j >= 1; j--) {
+            printf("%d", j);
+        }
+
         printf("\n");
     }
 
