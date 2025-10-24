@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    // Types signEs
+    // Types signes
     char caractere = 'A';
     signed char caractere_signe = -65;
     short entier_court = -12345;
@@ -9,14 +9,14 @@ int main() {
     long int entier_long = -123456789;
     long long int entier_tres_long = -1234567890123;
 
-    // Types non signEs
+    // Types non signes
     unsigned char caractere_non_signe = 200;
     unsigned short entier_court_non_signe = 50000;
     unsigned int entier_non_signe = 4000000000;
     unsigned long int entier_long_non_signe = 4000000000;
     unsigned long long int entier_tres_long_non_signe = 18446744073709551615U;
 
-    // Types rEels
+    // Types reels
     float flottant = 5.6f;
     double reel_double = -5554.12345;
     long double reel_tres_long = 1234567890.123456789;
