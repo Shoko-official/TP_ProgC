@@ -9,7 +9,7 @@ int main() {
     long int entier_long = -123456789;
     long long int entier_tres_long = -1234567890123;
 
-    // Types non signes
+    // Types non signs
     unsigned char caractere_non_signe = 200;
     unsigned short entier_court_non_signe = 50000;
     unsigned int entier_non_signe = 4000000000;
