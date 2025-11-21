@@ -62,11 +62,11 @@ int main() {
 
     for (int i = 0; i < 10; i++)
     {
-        printf("\nColor %d :", i + 1);
-        printf("\nRed %u\n", colors[i].red);
-        printf("\nGreen %u\n", colors[i].green);
-        printf("Blue\n %u\n", colors[i].blue);
-        printf("Alpha\n %u\n", colors[i].alpha);
+        printf("\n--------\nColor %d :\n", i + 1);
+        printf("Red %u\n", colors[i].red);
+        printf("Green %u\n", colors[i].green);
+        printf("Blue %u\n", colors[i].blue);
+        printf("Alpha %u\n", colors[i].alpha);
         printf("\x1b[48;2;%u;%u;%um  \x1b[0m", colors[i].red, colors[i].green, colors[i].blue); // display using ansii colors in background, 
     };
 }
