@@ -1,21 +1,22 @@
-/*
-**Vérification des Bits en C**
+#include <stdio.h>
 
-L'objectif de cet exercice est d'écrire un programme en C nommé *bits.c* qui vérifie si les 4ème et 20ème 
-bits de gauche d'une variable entière `d` sont à 1 en représentation binaire. Si les deux bits sont 1,
- le programme doit afficher 1 ; sinon, il doit afficher 0. Vous devez réaliser cette vérification 
- sans utiliser de fonctions et en plaçant toutes les instructions à l'intérieur de la fonction `main()`.
+int main(void) {
+    unsigned int d = 0b00000000000010000000000000001000;
 
-**Instructions :**
 
-- Déclarez une variable entière `d` et initialisez-la avec la valeur pour laquelle vous souhaitez vérifier les bits.
-- Utilisez des opérations de manipulation de bits pour extraire les 4ème et 20ème bits 
-de gauche de la variable `d`. Vous pouvez utiliser des opérateurs de décalage et des opérations de masquage.
-- Vérifiez si les deux bits extraits sont égaux à 1.
-- Affichez le résultat de la vérification à l'écran en utilisant la fonction `printf`. 
-Vous devez afficher 1 si les bits sont égaux à 1 et 0 sinon.
-- Compilez et exécutez le programme pour vérifier si le résultat affiché est correct pour la valeur de `d` que vous avez définie.
+    // On crée deux masques pour ces positions
+    unsigned int masque4  = 1 << (31 - 3); // créer un masque avec un 1 au 4e bit gauche
+    unsigned int masque20 = 1 << (31 - 19); // créer un masque avec un 1 au 20e bit gauche
 
-Assurez-vous que votre programme fonctionne correctement en vérifiant les 
-bits de gauche de la variable `d` et en affichant le résultat.
-*/
+    // On teste les deux bits en utilisant les masques
+    int bit4  = (d & masque4)  != 0;   // si on as 1 au masque et a d a la position 4e gauche = true, sinon = false
+    int bit20 = (d & masque20) != 0;
+
+    // Si les deux bits sont à 1 → affiche 1, sinon 0
+    if (bit4 && bit20)
+        printf("1\n");
+    else
+        printf("0\n");
+
+    return 0;
+}
